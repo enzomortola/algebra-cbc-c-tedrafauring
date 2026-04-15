@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Álgebra CBC — Visualizador Interactivo</title>
+  <meta name="description" content="Visualizador interactivo de vectores, rectas, planos e intersecciones para Álgebra CBC." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles (order matters) -->
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/utilities.css" />
+
+  <!-- Plotly (global, before modules) -->
+  <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       SIDEBAR — built by router.js
+  ══════════════════════════════════════ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon">∑</span>
+        <span class="logo-text">Álgebra CBC</span>
+      </div>
+      <button class="sidebar-toggle" id="sidebarToggle" title="Colapsar menú">‹</button>
+    </div>
+
+    <nav class="nav-menu" id="navMenu">
+      <!-- populated by router.js -->
+    </nav>
+
+    <div class="sidebar-footer">
+      <span>CBC · Álgebra Lineal</span>
+    </div>
+  </aside>
+
+  <!-- ══════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════ -->
+  <main class="main-content" id="mainContent">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="menu-btn" id="menuBtn" title="Menú">☰</button>
+        <h1 class="page-title" id="pageTitle">Cargando...</h1>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-badge">Visualizador Interactivo</div>
+      </div>
+    </header>
+
+    <!-- MODULE PANELS — populated by router.js -->
+    <div class="module-container" id="moduleContainer"></div>
+
+  </main>
+
+  <!-- App entry point — ES Module -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
