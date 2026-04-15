@@ -18,6 +18,7 @@ import Metrics        from './modules/metrics.js';
 import Economics      from './modules/economics.js';
 import Theory         from './modules/theory.js';
 import ExerciseLines  from './modules/exercise_lines.js';
+import ParameterK     from './modules/parameter_k.js';
 
 // ── Registro ───────────────────────────────
 router.register(Vectors);
@@ -29,6 +30,7 @@ router.register(Metrics);
 router.register(Economics);
 router.register(Theory);
 router.register(ExerciseLines);
+router.register(ParameterK);
 
 // ── Arrancar ───────────────────────────────
 router.start('vectors');
